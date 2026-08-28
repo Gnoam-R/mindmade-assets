@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MindMade 개인정보처리방침</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Malgun Gothic", sans-serif; max-width: 720px; margin: 40px auto 100px; padding: 0 24px; color: #1a1a1a; line-height: 1.7; }
+  h1 { font-size: 22px; margin-bottom: 8px; }
+  h2 { font-size: 17px; margin-top: 36px; border-top: 1px solid #e5e5e5; padding-top: 24px; }
+  p, li { font-size: 15px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; }
+  .back { display: inline-block; margin-bottom: 20px; font-size: 14px; color: #0e6ba8; text-decoration: none; }
+  .note { font-size: 13px; color: #666; background: #f7f7f7; padding: 12px 14px; border-radius: 6px; margin: 16px 0; }
+  footer { margin-top: 48px; font-size: 13px; color: #888; }
+</style>
+</head>
+<body>
+<a class="back" href="./index.html">&larr; MindMade 법적 고지</a>
+<h1>MindMade 개인정보처리방침</h1>
+<p>노형우(이하 "회사", 사업자등록 없는 개인 서비스 운영자)는 「개인정보 보호법」 등 관련 법령에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하게 처리할 수 있도록 다음과 같이 개인정보처리방침을 수립·공개합니다.</p>
+
+<h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+<table>
+<tr><th>구분</th><th>항목</th><th>수집 방법</th></tr>
+<tr><td>필수(회원가입)</td><td>이메일, 비밀번호(암호화 저장)</td><td>회원가입 시 직접 입력</td></tr>
+<tr><td>필수(구글 로그인 시)</td><td>이메일, 표시 이름(구글 계정 제공값)</td><td>Google 소셜 로그인(OAuth) 시 자동 수집 — 비밀번호는 수집하지 않음</td></tr>
+<tr><td>필수(서비스 이용)</td><td>닉네임(표시 이름), 프로필 이미지(선택)</td><td>프로필 설정 시 직접 입력</td></tr>
+<tr><td>필수(서비스 이용)</td><td>그룹 참여 이력, 실천 항목 완료 기록</td><td>서비스 이용 과정에서 자동 생성</td></tr>
+<tr><td>선택</td><td>인증 사진(실천 완료 증빙)</td><td>이용자가 직접 업로드(Supabase Storage 저장)</td></tr>
+<tr><td>선택</td><td>댓글 내용(그룹 피드)</td><td>이용자가 직접 입력</td></tr>
+<tr><td>선택(푸시 동의 시)</td><td>기기 푸시 토큰(FCM)</td><td>앱/웹에서 알림 권한 허용 시 자동 수집</td></tr>
+<tr><td>자동 수집</td><td>시간대(timezone), 언어 설정(locale)</td><td>가입 시 기기 설정값 기반 자동 저장(기본 Asia/Seoul, ko-KR)</td></tr>
+</table>
+<p>위치정보는 수집하지 않습니다. 결제 정보(카드번호 등)는 수집하지 않습니다 — "스테이크" 금액은 이용자가 입력한 명목상 숫자일 뿐, 실제 결제 수단과 연동되지 않습니다(이용약관 제7조 참조).</p>
+
+<h2>2. 개인정보의 수집 및 이용 목적</h2>
+<ol>
+<li>회원 식별 및 로그인 인증(이메일/비밀번호)</li>
+<li>그룹 기반 서비스 제공(그룹원 간 실천 항목·완료 여부·인증 사진 공유)</li>
+<li>진행률 리포트, 스테이크(벌칙) 정책 적용 및 알림 발송</li>
+<li>푸시 알림 발송(리마인더, 그룹 알림 — 동의한 이용자에 한함)</li>
+<li>부정 이용 방지 및 서비스 개선을 위한 통계 분석(개인 식별 없이 집계)</li>
+</ol>
+
+<h2>3. 개인정보의 보유 및 이용 기간</h2>
+<ol>
+<li>회원 탈퇴 시 지체 없이 파기합니다. 다만 다음 정보는 아래 기간 동안 보존합니다.
+  <ul>
+    <li>관계 법령(전자상거래법 등)에 따라 보존이 필요한 경우 해당 법령이 정한 기간</li>
+    <li>그룹 내 다른 이용자의 리포트·이력 정합성을 위해, 탈퇴한 이용자의 실천 완료 기록은 익명화(표시 이름을 "탈퇴한 사용자"로 대체)하여 보존할 수 있습니다.</li>
+  </ul>
+</li>
+<li>인증 사진은 완료 기록 삭제 시 함께 삭제되며, 그룹 피드에서 소프트 삭제된 사진은 일정 기간(10일) 후 원본까지 완전히 삭제됩니다.</li>
+<li>푸시 토큰은 로그아웃 또는 알림 권한 해제 시 즉시 삭제됩니다.</li>
+</ol>
+
+<h2>4. 개인정보의 제3자 제공</h2>
+<p>회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만 다음의 경우는 예외로 합니다.</p>
+<ul>
+<li>이용자가 사전에 동의한 경우</li>
+<li>법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+</ul>
+<p><strong>그룹 내 공개 범위</strong>: 실천 완료 여부, 인증 사진, 댓글, 닉네임은 같은 그룹에 속한 멤버에게 공개됩니다. 스테이크 3단계(그룹 전체 공개 알림)가 발동하면 실패 사실이 그룹 멤버 전원에게 알림으로 발송됩니다. 그룹마다 오너와 정책이 달라 앱 설치 1회성인 위 약관 동의와는 별개로, 그룹에 참여할 때마다 이 공개 범위와 벌칙 정책 노출 가능성을 안내하는 확인 다이얼로그를 앱 내에서 띄우고 동의를 받은 뒤에만 참여를 진행합니다.</p>
+
+<h2>5. 개인정보 처리의 위탁</h2>
+<p>서비스 운영을 위해 아래와 같이 개인정보 처리를 위탁하고 있습니다.</p>
+<table>
+<tr><th>수탁업체</th><th>위탁업무</th><th>처리 위치</th></tr>
+<tr><td>Supabase (Supabase Inc.)</td><td>회원 인증, 데이터베이스 저장, 인증 사진 파일 저장(Storage)</td><td>해외(싱가포르, ap-southeast-1 리전)</td></tr>
+<tr><td>Vercel (Vercel Inc.)</td><td>웹 서비스 호스팅</td><td>해외</td></tr>
+<tr><td>Firebase Cloud Messaging (Google)</td><td>웹 푸시 알림 발송</td><td>해외</td></tr>
+</table>
+
+<h2>6. 이용자의 권리와 행사 방법</h2>
+<p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
+<ol>
+<li>개인정보 열람·정정 요구 (설정 &gt; 프로필에서 직접 수정 가능한 항목은 즉시 반영)</li>
+<li>처리정지 요구</li>
+<li>회원 탈퇴(삭제) 요구</li>
+</ol>
+<p>권리 행사는 서비스 내 설정 메뉴 또는 아래 연락처를 통해 요청할 수 있으며, 회사는 지체 없이 조치합니다.</p>
+
+<h2>7. 개인정보의 파기절차 및 방법</h2>
+<p>보유기간이 경과하거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다. 전자적 파일 형태는 복구 불가능한 방법으로 영구 삭제하며, 종이 문서는 해당하지 않습니다(전자 서비스).</p>
+
+<h2>8. 개인정보의 안전성 확보 조치</h2>
+<ol>
+<li>비밀번호는 암호화하여 저장합니다(Supabase Auth 기본 정책).</li>
+<li>데이터베이스 접근은 Row Level Security(RLS)로 그룹/본인 소유 데이터만 조회·수정 가능하도록 제한합니다.</li>
+<li>관리자 권한은 최소한의 인원에게만 부여합니다.</li>
+</ol>
+
+<h2>9. 개인정보 보호책임자</h2>
+<ul>
+<li>성명: 노형우</li>
+<li>연락처(이메일): romin1027@gmail.com</li>
+<li>개인정보 관련 문의·불만 처리를 담당합니다.</li>
+</ul>
+
+<h2>10. 고지의 의무</h2>
+<p>이 방침은 시행일로부터 적용되며, 내용 추가·삭제·수정이 있는 경우 시행 최소 7일 전부터 서비스 내 공지사항을 통해 고지합니다.</p>
+
+<footer>시행일자: 2026-08-27</footer>
+</body>
+</html>
